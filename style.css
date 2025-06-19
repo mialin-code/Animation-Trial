@@ -1,0 +1,330 @@
+body {
+  background-color: #F1E6D2;
+  margin: 0;
+}
+
+#first-part {
+  height: 70vh;
+  position: relative;
+  z-index: -10;
+}
+
+.scene {
+  position: relative;
+  height: 10vh;
+  overflow: visible;
+}
+
+.welcome-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 450px;
+  text-align: center;
+  color: #ce2f2a;
+  text-shadow: 0px 9px 5px #494545;
+  margin-top: 350px;
+}
+
+.cart-container {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease-out;
+  z-index: -10;
+}
+
+.cart-container.slide-in {
+  transform: translateX(185%);
+}
+
+.cartImage {
+  width: 760px;
+  height: auto;
+  filter: drop-shadow(23px 5px 10px rgba(0, 0, 0, 0.4));
+}
+
+.itemImage {
+  position: absolute;
+  top: 40%;   
+  left: 55%; 
+  width: 250px;
+  z-index: -10;
+  filter: drop-shadow(23px 5px 10px rgba(0, 0, 0, 0.4));
+  transform-origin: center;
+  pointer-events: none;
+  transition: transform 1s ease, scale 0.3s ease;
+  will-change: transform;
+}
+
+#item1 {
+  top: 23%;
+  left: 40%;
+  transform: rotate(67deg);
+  z-index: -5;
+}
+
+#item2 {
+  top: 18%;
+  left: 30%;
+  transform: rotate(17deg);
+}
+
+#item3 {
+  top: 20%;
+  left: 55%;
+  transform: rotate(-10deg);
+}
+
+#item4 {
+  top: 18%;
+  left: 60%;
+  transform: rotate(10deg);
+}
+
+#item5 {
+  top: 15%;
+  left: 55%;
+  transform: rotate(-10deg);
+}
+
+#item6 {
+  top: 20%; 
+  left: 23%;
+  transform: rotate(-20deg);
+}
+
+#item7 {
+  top: 20%; 
+  left: 35%;
+  transform: rotate(-30deg);
+}
+
+#item8 {
+  top: 25%; 
+  left: 25%;
+  transform: rotate(-5deg);
+}
+
+.cart-container.bounce-tip {
+  animation: bounceTip 2.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes bounceTip {
+  0% {
+    transform: translateX(185%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(180%) rotate(-85deg);
+  }
+  70% {
+    transform: translateX(182%) rotate(-90deg);
+  }
+  85% {
+    transform: translateX(179%) rotate(-85deg);
+  }
+  100% {
+    transform: translateX(180%) rotate(-88deg);
+  }
+}
+
+
+@keyframes tumbleItem1 {
+  to { transform: translate(-200px, -400px) rotate(-760deg); }
+}
+
+@keyframes tumbleItem1_2 {
+  from { transform: translate(-200px, -400px) rotate(-760deg); }
+  to   { transform: translate(-400px, -500px) rotate(-800deg); }
+}
+
+@keyframes tumbleItem1_3 {
+  from { transform: translate(-400px, -500px) rotate(-800deg); }
+  to   { transform: translate(-750px, -650px) rotate(-900deg); }
+}
+
+@keyframes tumbleItem1_4 {
+  from { transform: translate(-750px, -650px) rotate(-900deg); }
+  to   { transform: translate(-1200px, -750px) rotate(-1000deg); }
+}
+
+@keyframes tumbleItem2 {
+  to { transform: translate(-50px,-240px) rotate(-560deg); }
+}
+
+@keyframes tumbleItem2_2 {
+  from { transform: translate(-50px,-240px) rotate(-560deg); }
+  to   { transform: translate(-100px, -450px) rotate(-600deg); }
+}
+
+@keyframes tumbleItem2_3 {
+  from { transform: translate(-100px, -450px) rotate(-600deg); }
+  to   { transform: translate(-250px, -550px) rotate(-700deg); }
+}
+
+@keyframes tumbleItem2_4 {
+  from { transform: translate(-250px, -550px) rotate(-700deg); }
+  to   { transform: translate(-850px, -550px) rotate(-800deg); }
+}
+
+@keyframes tumbleItem3 {
+  to { transform: translate(-20px, -220px) rotate(-600deg); }
+}
+
+@keyframes tumbleItem3_2 {
+  from { transform: translate(-20px, -220px) rotate(-600deg); }
+  to   { transform: translate(-80px, -400px) rotate(-700deg); }
+}
+
+@keyframes tumbleItem3_3 {
+  from { transform: translate(-80px, -400px) rotate(-700deg); }
+  to   { transform: translate(-200px, -350px) rotate(-800deg); }
+}
+
+@keyframes tumbleItem3_4 {
+  from { transform: translate(-200px, -350px) rotate(-800deg); }
+  to   { transform: translate(-860px, -650px) rotate(-900deg); }
+}
+
+@keyframes tumbleItem4 {
+  to { transform: translate(-40px, -100px) rotate(-480deg); }
+}
+
+@keyframes tumbleItem4_2 {
+  from { transform: translate(-40px, -100px) rotate(-480deg); }
+  to   { transform: translate(-80px, -400px) rotate(-500deg); }
+}
+
+@keyframes tumbleItem4_3 {
+  from { transform: translate(-80px, -400px) rotate(-500deg); }
+  to   { transform: translate(-100px, -550px) rotate(-600deg); }
+}
+
+@keyframes tumbleItem4_4 {
+  from { transform: translate(-100px, -550px) rotate(-600deg); }
+  to   { transform: translate(-850px, -650px) rotate(-700deg); }
+}
+
+@keyframes tumbleItem5 {
+  to { transform: translate(-60px, -10px) rotate(-660deg); }
+}
+
+@keyframes tumbleItem5_2 {
+  from { transform: translate(-60px, -10px) rotate(-660deg); }
+  to   { transform: translate(-90px, -50px) rotate(-700deg); }
+}
+
+@keyframes tumbleItem5_3 {
+  from { transform: translate(-90px, -50px) rotate(-700deg); }
+  to   { transform: translate(-140px, -230px) rotate(-800deg); }
+}
+
+@keyframes tumbleItem5_4 {
+  from { transform: translate(-140px, -230px) rotate(-800deg); }
+  to   { transform: translate(-860px, -530px) rotate(-970deg); }
+}
+
+@keyframes tumbleItem6 {
+  to { transform: translate(-60px, -130px) rotate(-700deg); }
+}
+
+@keyframes tumbleItem6_2 {
+  from { transform: translate(-60px, -130px) rotate(-700deg); }
+  to   { transform: translate(-120px, -230px) rotate(-800deg); }
+}
+
+@keyframes tumbleItem6_3 {
+  from { transform: translate(-120px, -230px) rotate(-800deg); }
+  to   { transform: translate(-140px, -330px) rotate(-900deg); }
+}
+
+@keyframes tumbleItem6_4 {
+  from { transform: translate(-140px, -330px) rotate(-900deg); }
+  to   { transform: translate(-840px, -630px) rotate(-1000deg); }
+}
+
+@keyframes tumbleItem7 {
+  to { transform: translate(-40px, -220px) rotate(-750deg); }
+}
+
+@keyframes tumbleItem7_2 {
+  from { transform: translate(-40px, -220px) rotate(-750deg); }
+  to   { transform: translate(-90px, -340px) rotate(-800deg); }
+}
+
+@keyframes tumbleItem7_3 {
+  from { transform: translate(-90px, -340px) rotate(-800deg); }
+  to   { transform: translate(-180px, -540px) rotate(-900deg); }
+}
+
+@keyframes tumbleItem7_4 {
+  from { transform: translate(-180px, -540px) rotate(-900deg); }
+  to   { transform: translate(-880px, -640px) rotate(-1050deg); }
+}
+
+@keyframes tumbleItem8 {
+  to { transform: translate(-50px, -110px) rotate(-500deg); }
+}
+
+@keyframes tumbleItem8_2 {
+  from { transform: translate(-50px, -110px) rotate(-500deg); }
+  to   { transform: translate(-10px, -380px) rotate(-600deg); }
+}
+
+@keyframes tumbleItem8_3 {
+  from { transform: translate(-10px, -380px) rotate(-600deg); }
+  to   { transform: translate(-180px, -580px) rotate(-700deg); }
+}
+
+@keyframes tumbleItem8_4 {
+  from { transform: translate(-180px, -580px) rotate(-700deg); }
+  to   { transform: translate(-880px, -480px) rotate(-800deg); }
+}
+
+#second-part {
+  z-index: -10;
+  position: absolute;
+  background-color: #F1E6D2;
+}
+
+.receipt-img {
+  position: absolute;
+  top: 700px;
+  left: 1000px;
+  width: 200px;
+  z-index: 3;
+  transform: scale(5);
+}
+
+.receipt {
+  position: absolute;
+  top: 560px;
+  right: 930px;
+  padding: 15px 20px;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  max-width: 210px;
+  z-index: 5;
+  transform: scale(2);
+}
+
+.receipt h3, .receipt p {
+  margin: 0;
+  padding: 3px 0;
+  text-align: left;
+}
+
+.receipt .total {
+  border-top: 1px dashed #999;
+  margin-top: 5px;
+  padding-top: 5px;
+  font-weight: bold;
+}
+
+#second-part {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
